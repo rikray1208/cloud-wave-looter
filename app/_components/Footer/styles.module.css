@@ -1,0 +1,145 @@
+.container {
+    margin-top: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 40px;
+
+    position: relative;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    max-width: 744px;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.info > span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.infoBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+    padding: 4px 8px;
+
+    background: var(--text-blue);
+    border: 1px solid transparent;
+    border-radius: 200px;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    color: var(--text-black);
+}
+
+.title {
+    color: var(--text-blue);
+    font-weight: 700;
+    font-size: 30px;
+
+    margin-right: auto;
+}
+
+.title > span {
+    color: white;
+}
+
+.ellipse {
+    position: absolute;
+    z-index: 0;
+}
+
+.ellipse1 {
+    display: none;
+}
+
+.ellipse2 {
+    right: 17vw;
+    top: -25vh;
+}
+
+.ellipse3 {
+    z-index: 100;
+    bottom: -15vh;
+    right: -30vw;
+}
+
+.videoContainer {
+    position: relative;
+}
+
+.video {
+    z-index: 1000;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.mask {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+    border-radius: 20px;
+    background-color: #3370FF;
+    opacity: 30%;
+    mix-blend-mode: soft-light;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+
+    .info {
+        gap: 68px;
+    }
+
+    .info > span {
+        font-size: 48px;
+    }
+
+    .infoBtn {
+        gap: 44px;
+        padding: 12px 48px;
+
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .ellipse1 {
+        display: block;
+        left: 0;
+    }
+
+    .ellipse3 {
+        right: -5vw;
+        bottom: -20vh;
+    }
+}

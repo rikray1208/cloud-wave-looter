@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    margin-top: 100px;
+
+    position: relative;
+}
+
+.price1 {
+    z-index: 0;
+    bottom: -15vh;
+    left: -20vw;
+    position: absolute;
+}
+
+.price2 {
+    z-index: 0;
+    top: 10vh;
+    right: -20vw;
+    position: absolute;
+}
+
+.list {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.itemClaudWave {
+    text-align: center;
+
+    color: var(--logo-blue);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.item > p {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.item > span {
+    font-size: 32px;
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 112px;
+    }
+
+    .itemClaudWave {
+        font-size: 32px;
+    }
+
+
+    .item > p {
+        font-size: 20px;
+    }
+
+    .item > span {
+        font-size: 64px;
+    }
+
+    .price1 {
+        z-index: 0;
+        top: 0;
+        bottom: unset;
+        left: 10vw;
+        position: absolute;
+    }
+
+    .price2 {
+        z-index: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+}

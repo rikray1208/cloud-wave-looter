@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url(../public/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 3800px;
+
+    color: white;
+    font-weight: 300;
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: clip;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+:root {
+    --logo-blue: #3370FF;
+    --text-blue: #004cff;
+
+    --text-black: #010819;
+}
+
