@@ -1,5 +1,9 @@
+"use client"
+
 import React from 'react';
 import {BlockTitle} from "@/app/_components/ui";
+
+import {motion, Variants} from "framer-motion"
 
 import styles from './styles.module.css'
 
@@ -18,25 +22,63 @@ const list2 = [
     {id: 10, value: 'lolz'},
 ]
 
+const listAnm1: Variants = {
+    hide: {
+        x: -1000,
+    },
+    show: {
+        x: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        },
+    },
+};
+
+const listAnm2: Variants = {
+    hide: {
+        x: 1000,
+    },
+    show: {
+        x: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        },
+    },
+};
+
 const Payments = () => {
     return (
         <section className={styles.container}>
             <BlockTitle light={true}>Способы оплаты</BlockTitle>
             <div className={styles.listContainer}>
-                <ul className={styles.list}>
+                <motion.ul
+                    viewport={{ once: true }}
+                    variants={listAnm1}
+                    className={styles.list}
+                    initial="hide"
+                    whileInView="show"
+                >
                     {
                         list1.map(el =>
                             <li key={el.id} className={styles.item}>{el.value}</li>
                         )
                     }
-                </ul>
-                <ul className={styles.list}>
+                </motion.ul>
+                <motion.ul
+                    viewport={{ once: true }}
+                    variants={listAnm2}
+                    className={styles.list}
+                    initial="hide"
+                    whileInView="show"
+                >
                     {
                         list2.map(el =>
                             <li key={el.id} className={styles.item}>{el.value}</li>
                         )
                     }
-                </ul>
+                </motion.ul>
             </div>
         </section>
     );

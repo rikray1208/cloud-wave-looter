@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+    background-color: #00081A;
     background-image: url(../public/back.png);
     background-size: cover;
     background-repeat: no-repeat;

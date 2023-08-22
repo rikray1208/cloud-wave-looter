@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import {BlockTitle, Card} from "@/app/_components/ui";
 
@@ -8,6 +10,7 @@ import price2 from '@/public/price2.png'
 import Image from "next/image";
 
 import { orbitron } from '@/fonts'
+import {motion, Variants} from "framer-motion"
 
 const items = [
     {key: 1, title: 'Подписка 1 месяц', value: '5.99$'},
@@ -16,13 +19,30 @@ const items = [
     {key: 4, title: 'Подписка LT', value: '49.99$'},
 ]
 
+const toUp: Variants = {
+    hide: {
+        x: 1000,
+    },
+    show: {
+        x: 0,
+        transition: {
+            duration: 0.8,
+            ease: "linear",
+        },
+    },
+};
+
 const Prices = () => {
     return (
         <section className={styles.container}>
             <BlockTitle>Цены</BlockTitle>
-            <Image className={styles.price1} src={price1} alt={'price'} quality={100}/>
-            <Image className={styles.price2} src={price2} alt={'price'} quality={100}/>
-            <ul className={styles.list}>
+            <motion.ul
+                viewport={{ once: true }}
+                variants={toUp}
+                whileInView="show"
+                initial="hide"
+                className={styles.list}
+            >
                 {
                     items.map((item) =>
                         <Card key={item.key}>
@@ -37,7 +57,9 @@ const Prices = () => {
                         </Card>
                     )
                 }
-            </ul>
+            </motion.ul>
+            <Image className={styles.price1} src={price1} alt={'price'} quality={100}/>
+            <Image className={styles.price2} src={price2} alt={'price'} quality={100}/>
         </section>
     );
 };

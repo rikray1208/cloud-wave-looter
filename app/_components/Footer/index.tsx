@@ -10,6 +10,7 @@ import ellipse3 from '@/public/ellipse3.png'
 import styles from './styles.module.css'
 import Link from "next/link";
 import {TG_LINK} from "@/utils/constants";
+import FooterItems from "@/app/_components/Footer/FooterItems";
 
 const Footer = () => {
     return (
@@ -39,13 +40,11 @@ const Footer = () => {
                     muted
                     loop
                 >
-                    <source className={styles.source} src={'panel1.mp4'} type="video/mp4"/>
+                    <source className={styles.source} src={'panel.mp4'} type="video/mp4"/>
                 </video>
                 <div className={styles.mask}/>
             </div>
-            <Image className={`${styles.ellipse} ${styles.ellipse1}`} src={ellipse1} alt={'ellipse1'} quality={100}/>
-            <Image className={`${styles.ellipse} ${styles.ellipse2}`} src={ellipse2} alt={'ellipse2'} quality={100}/>
-            <Image className={`${styles.ellipse} ${styles.ellipse3}`} src={ellipse3} alt={'ellipse3'} quality={100}/>
+            <FooterItems/>
         </section>
     );
 };
