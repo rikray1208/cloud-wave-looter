@@ -30,9 +30,8 @@ const listAnm1: Variants = {
     show: {
         x: 0,
         transition: {
-            duration: 0.4,
+            duration: 0.5,
             ease: "linear",
-            repeat: 10,
         },
     },
 };
@@ -44,9 +43,8 @@ const listAnm2: Variants = {
     show: {
         x: 0,
         transition: {
-            duration: 0.4,
+            duration: 0.5,
             ease: "linear",
-            repeat: 10,
         },
     },
 };
