@@ -39,10 +39,6 @@
     color: var(--text-blue)
 }
 
-.looter {
-    display: none;
-    transform: translateY(-11%);
-}
 
 .mobileLooter {
     order: -1;
@@ -68,9 +64,5 @@
 
     .mobileLooter {
         display: none;
-    }
-
-    .looter {
-        display: block;
     }
 }

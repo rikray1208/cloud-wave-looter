@@ -3,6 +3,9 @@ import '@/styles/globals.css'
 import {openSans} from "@/fonts";
 
 import type { Metadata } from 'next'
+import Image from "next/image";
+
+import back from '@/public/back.png'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={openSans.className}>
       {children}
+      <Image className={'absolute inset-0 z-[-1]'} src={back} alt={'background'} quality={100}/>
       </body>
     </html>
   )

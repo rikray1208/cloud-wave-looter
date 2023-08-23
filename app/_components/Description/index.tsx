@@ -67,6 +67,8 @@ const trianglesRight: Variants = {
 };
 
 const Description = () => {
+    const isMobile = false
+
     return (
         <section id={'description'} className={styles.container}>
             <motion.div
@@ -75,7 +77,7 @@ const Description = () => {
                 whileInView="show"
                 initial="hide"
             >
-                <Image className={styles.triangles1} src={triangles1} alt={'triangle'} width={814} quality={100}/>
+                <Image className={styles.triangles1} src={triangles1} alt={'triangle'} width={814} height={814} quality={100}/>
             </motion.div>
             <motion.div
                 viewport={{ once: true }}
@@ -83,7 +85,7 @@ const Description = () => {
                 whileInView="show"
                 initial="hide"
             >
-                <Image className={styles.triangles2} src={triangles2} alt={'triangle'} width={814} quality={100}/>
+                <Image className={styles.triangles2} src={triangles2} alt={'triangle'} width={814} height={814} quality={100}/>
             </motion.div>
 
             <motion.div
@@ -99,7 +101,12 @@ const Description = () => {
                         {
                             items.map(item =>
                                 <li key={item.key} className={styles.item}>
-                                    {item.value}
+                                    {isMobile ?
+                                        <Image src={`/list/${item.key}.png`} alt={'1'} width={38} height={38} quality={100}/>
+                                        :
+                                        <Image src={`/list/${item.key}.png`} alt={'1'} width={60} height={60} quality={100}/>
+                                    }
+                                    <p>{item.value}</p>
                                 </li>
                             )
                         }

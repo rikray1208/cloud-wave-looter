@@ -1,12 +1,5 @@
 import React from 'react';
 
-import Image from "next/image";
-
-
-import ellipse1 from '@/public/ellipse1.png'
-import ellipse2 from '@/public/ellipse2.png'
-import ellipse3 from '@/public/ellipse3.png'
-
 import styles from './styles.module.css'
 import Link from "next/link";
 import {TG_LINK} from "@/utils/constants";

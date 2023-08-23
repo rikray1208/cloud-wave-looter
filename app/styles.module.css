@@ -3,8 +3,18 @@
     padding: 0 24px;
 }
 
+.mainLooter {
+    display: none;
+    transform: translateY(-11%);
+}
+
+
 @media (min-width: 768px) {
     .mainContainer {
         padding: 0 80px;
+    }
+
+    .mainLooter {
+        display: block;
     }
 }

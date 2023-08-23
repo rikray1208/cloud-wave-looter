@@ -72,6 +72,7 @@
 .ellipse2 {
     right: 17vw;
     top: -25vh;
+    animation: ellipse2Anim 75s linear 0s infinite normal forwards;
 }
 
 .ellipse3 {
@@ -136,10 +137,77 @@
     .ellipse1 {
         display: block;
         left: 0;
+        animation: ellipse1Anim 50s linear 0s infinite normal forwards;
     }
 
     .ellipse3 {
         right: -5vw;
         bottom: -20vh;
+    }
+}
+
+@keyframes ellipse1Anim {
+
+    20% {
+        transform: translate(-20px, 20px);
+    }
+
+    40% {
+        transform: translate(-20px, -20px);
+    }
+
+    60% {
+        transform: translate(20px, 20px);
+    }
+
+    80% {
+        transform: translate(20px, -20px);
+    }
+}
+
+@keyframes ellipse2Anim {
+
+    0% {
+        transform: translate(0);
+    }
+
+    10% {
+        transform: translate(-15px, -15px);
+    }
+
+    20% {
+        transform: translate(15px, -15px);
+    }
+
+    30% {
+        transform: translate(-15px, 15px);
+    }
+
+    40% {
+        transform: translate(15px, 15px);
+    }
+
+    50% {
+        transform: translate(-15px, -15px);
+    }
+
+    60% {
+        transform: translate(15px, -15px);
+    }
+
+    70% {
+        transform: translate(-15px, 15px);
+    }
+
+    80% {
+        transform: translate(-15px, -15px);
+    }
+
+    90% {
+        transform: translate(15px, -15px);
+    }
+
+    100% {
+        transform: translate(0);
     }
 }

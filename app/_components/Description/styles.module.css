@@ -21,6 +21,8 @@
 }
 
 .looter {
+    width: auto;
+    height: auto;
     display: none;
     z-index: 1000;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%));
@@ -28,6 +30,8 @@
 
 
 .triangles1 {
+    width: auto;
+    height: auto;
     z-index: 0;
     position: absolute;
     left: -40vw;
@@ -55,15 +59,20 @@
 
     font-weight: 600;
     font-size: 16px;
-    gap: 25px;
 }
 
 .item {
-    max-width: 390px;
+    display: flex;
+    align-items: center;
+
+
+    gap: 15px;
+    max-width: 420px;
     width: 100%;
 }
 
-.item > span {
+
+.item p > span {
     color: var(--text-blue);
 }
 

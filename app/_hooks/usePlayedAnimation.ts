@@ -14,7 +14,7 @@ export const usePlayedAnimation = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };

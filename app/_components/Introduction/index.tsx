@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import Image from "next/image";
 
 import looter from '@/public/mainLooter1.png'
@@ -36,7 +36,7 @@ const imageAnimation: Variants = {
     },
 };
 
-const Introduction = () => {
+const Introduction: React.FC<PropsWithChildren> = ({ children }) => {
     return (
         <section className={styles.container}>
             <div>
@@ -58,7 +58,7 @@ const Introduction = () => {
                 whileInView="show"
                 initial="hide"
             >
-                <Image className={styles.looter} src={looter} alt={'looter'} quality={100}/>
+                { children }
             </motion.div>
             <Image className={styles.mobileLooter} src={mobileLooter} alt={'mobileLooter'} quality={100}/>
         </section>
