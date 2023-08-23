@@ -15,7 +15,7 @@ const items = [
     {key: 4, title: 'Подписка LT', value: '49.99$'},
 ]
 
-const toCenter: Variants = {
+const list: Variants = {
     open: {
         transition: { staggerChildren: 1.07, delayChildren: 1.04 }
     },
@@ -43,15 +43,16 @@ interface PricesProps {
 }
 
 const Prices: React.FC<PricesProps> = ({ children }) => {
+
     return (
         <section className={styles.container}>
             <BlockTitle>Цены</BlockTitle>
             <motion.ul
+                className={styles.list}
                 viewport={{ once: true }}
-                variants={toCenter}
+                variants={list}
                 whileInView="closed"
                 initial="open"
-                className={styles.list}
             >
                 {
                     items.map((item) =>

@@ -5,12 +5,6 @@
 }
 
 .cardsContainer {
-
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*flex-wrap: wrap;*/
-    /*gap: 32px;*/
-
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -21,8 +15,6 @@
 }
 
 .looter {
-    width: auto;
-    height: auto;
     display: none;
     z-index: 1000;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%));
@@ -30,13 +22,11 @@
 
 
 .triangles1 {
-    width: auto;
-    height: auto;
     z-index: 0;
     position: absolute;
     left: -40vw;
     bottom: 0;
-    transform: translateY(25%);
+    transform: translateY(205%);
 }
 
 .triangles2 {
@@ -49,9 +39,8 @@
 
 .list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 
     max-width: 1046px;
     width: 100%;
@@ -59,18 +48,21 @@
 
     font-weight: 600;
     font-size: 16px;
+
+    z-index: 100;
 }
 
 .item {
     display: flex;
     align-items: center;
-
-
     gap: 15px;
     max-width: 420px;
     width: 100%;
 }
 
+.item > p {
+    font-size: 12px;
+}
 
 .item p > span {
     color: var(--text-blue);
@@ -82,6 +74,15 @@
     }
 
     .list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        flex-direction: row;
+
+    }
+
+    .item > p {
         font-size: 24px;
     }
 
@@ -90,7 +91,7 @@
         z-index: 0;
         left: -10vw;
         top: 0;
-        bottom: unset;
+
         transform: translateY(-10%);
     }
 

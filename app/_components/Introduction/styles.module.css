@@ -11,9 +11,11 @@
     flex-direction: column;
     gap: 20px;
     justify-content: flex-end;
+
+    width: 100%;
     max-width: 800px;
 
-    transform: translateY(-38%);
+    transform: translateY(-27%);
 }
 
 .h1 {

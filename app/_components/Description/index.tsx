@@ -11,6 +11,7 @@ import styles from './styles.module.css'
 import {BlockTitle, Card} from "@/app/_components/ui";
 
 import {motion, Variants} from "framer-motion"
+import {useIsMobile} from "@/app/_hooks/useIsMobile";
 
 const items = [
     {key: 1, value: <>Поддержка <span>прокси</span></>},
@@ -20,7 +21,7 @@ const items = [
     {key: 5, value: <>Возможность обрабатывать <span>разные</span> инвентари</>},
     {key: 6, value: <><span>Отслеживание</span> аккаунтов с КТ</>},
     {key: 7, value: <>Авторизация по <span>токену</span></>},
-    {key: 8, value: <><span>Подробные</span> логи</>},
+    {key: 8, value: <>Разные <span>режимы</span> работы</>},
     {key: 9, value: <>Удобная <span>таблица</span> аккаунтов</>},
     {key: 10, value: <>Статистика</>},
 ]
@@ -32,42 +33,40 @@ const descriptionAnimation: Variants = {
     show: {
         y: 0,
         transition: {
-            duration: 1,
-            ease: "linear",
+            duration: 0.6,
+            ease: "easeOut",
         },
     },
 };
 
 const trianglesLeft: Variants = {
     hide: {
-        x: -800,
+        x: '-100%',
     },
     show: {
         x: 0,
         transition: {
-            duration: 1,
+            x: {duration: 0.7, stiffness: 1000, velocity: -100},
             ease: "linear",
-            delay: 0.2
         },
     },
 };
 
 const trianglesRight: Variants = {
     hide: {
-        x: 800,
+        x: '100%',
     },
     show: {
         x: 0,
         transition: {
-            duration: 1,
+            x: {duration: 0.7, stiffness: 1000, velocity: -100},
             ease: "linear",
-            delay: 0.2
         },
     },
 };
 
 const Description = () => {
-    const isMobile = false
+    const isMobile = useIsMobile()
 
     return (
         <section id={'description'} className={styles.container}>
@@ -102,9 +101,9 @@ const Description = () => {
                             items.map(item =>
                                 <li key={item.key} className={styles.item}>
                                     {isMobile ?
-                                        <Image src={`/list/${item.key}.png`} alt={'1'} width={38} height={38} quality={100}/>
+                                        <Image src={`/list/${item.key}.png`} alt={`${item.key}`} width={38} height={38} quality={100} />
                                         :
-                                        <Image src={`/list/${item.key}.png`} alt={'1'} width={60} height={60} quality={100}/>
+                                        <Image src={`/list/${item.key}.png`} alt={`${item.key}`} width={60} height={60} quality={100}/>
                                     }
                                     <p>{item.value}</p>
                                 </li>
@@ -112,7 +111,7 @@ const Description = () => {
                         }
                     </ul>
                 </Card>
-                <Image className={styles.looter} src={footer} alt={'looter'} quality={100} width={400} height={550}/>
+                <Image className={styles.looter} src={footer} alt={'looter'} quality={100} height={550}/>
             </motion.div>
         </section>
     );

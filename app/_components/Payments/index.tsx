@@ -24,31 +24,35 @@ const list2 = [
 
 const listAnm1: Variants = {
     hide: {
-        x: -1000,
+        x: '-100%',
+
     },
     show: {
         x: 0,
         transition: {
-            duration: 0.5,
-            ease: "easeOut"
+            duration: 0.4,
+            ease: "linear",
+            repeat: 10,
         },
     },
 };
 
 const listAnm2: Variants = {
     hide: {
-        x: 1000,
+        x: '100%',
     },
     show: {
         x: 0,
         transition: {
-            duration: 0.5,
-            ease: "easeOut"
+            duration: 0.4,
+            ease: "linear",
+            repeat: 10,
         },
     },
 };
 
 const Payments = () => {
+
     return (
         <section className={styles.container}>
             <BlockTitle light={true}>Способы оплаты</BlockTitle>
@@ -57,7 +61,7 @@ const Payments = () => {
                     viewport={{ once: true }}
                     variants={listAnm1}
                     className={styles.list}
-                    initial="hide"
+                    initial='hide'
                     whileInView="show"
                 >
                     {

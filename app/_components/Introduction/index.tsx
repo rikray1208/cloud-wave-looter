@@ -12,9 +12,11 @@ import {motion, Variants} from "framer-motion"
 
 const title: Variants = {
     hide: {
-        x: -1000,
+        opacity: 0,
+        x: '-100%',
     },
     show: {
+        opacity: 1,
         x: 0,
         transition: {
             duration: 1,
@@ -25,9 +27,11 @@ const title: Variants = {
 
 const imageAnimation: Variants = {
     hide: {
-        x: 810,
+        opacity: 0,
+        x: '100%',
     },
     show: {
+        opacity: 1,
         x: 0,
         transition: {
             duration: 1,
@@ -45,11 +49,13 @@ const Introduction: React.FC<PropsWithChildren> = ({ children }) => {
                     variants={title}
                     whileInView="show"
                     initial="hide"
-                    className={styles.textContainer}
+
                 >
-                    <h1 className={styles.h1}>CloudWave <span>Steam Inventory Looter</span></h1>
-                    <p className={styles.p}><span>Удобный инструмент</span> для быстрой  передачи вещей с N аккаунтов на 1.</p>
-                    <p className={styles.p}>Выбор нужных игр, <span>фильтрация</span> предметов, <span>автоматическое принятие трейдов, статистика.</span></p>
+                    <div   className={styles.textContainer}>
+                        <h1 className={styles.h1}>CloudWave <span>Steam Inventory Looter</span></h1>
+                        <p className={styles.p}><span>Удобный инструмент</span> для быстрой  передачи вещей с N аккаунтов на 1.</p>
+                        <p className={styles.p}>Выбор нужных игр, <span>фильтрация</span> предметов, <span>автоматическое принятие трейдов, статистика.</span></p>
+                    </div>
                 </motion.div>
             </div>
             <motion.div
