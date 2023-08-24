@@ -49,7 +49,6 @@ const Introduction: React.FC<PropsWithChildren> = ({ children }) => {
                     variants={title}
                     whileInView="show"
                     initial="hide"
-
                 >
                     <div   className={styles.textContainer}>
                         <h1 className={styles.h1}>CloudWave <span>Steam Inventory Looter</span></h1>
@@ -63,6 +62,7 @@ const Introduction: React.FC<PropsWithChildren> = ({ children }) => {
                 variants={imageAnimation}
                 whileInView="show"
                 initial="hide"
+                className={styles.lContainer}
             >
                 { children }
             </motion.div>

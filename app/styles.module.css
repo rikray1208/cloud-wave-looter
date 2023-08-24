@@ -8,6 +8,51 @@
     transform: translateY(-11%);
 }
 
+.l1 {
+    position: relative;
+    z-index: 3;
+    animation: l1Anm 50s ease-in-out 0s infinite normal forwards;
+    animation-delay: 3s;
+}
+
+.l2 {
+    position: absolute;
+    z-index: 2;
+
+    top: -50px;
+    right: -98px;
+    animation: l2Anm 50s linear 0s infinite normal forwards;
+    animation-delay: 28s;
+}
+
+.l3 {
+    position: absolute;
+    z-index: 1;
+    right: -200px;
+    top: -95px;
+    animation: l3Anm 50s ease-in-out 0s infinite normal forwards;
+    animation-delay: 3s;
+}
+
+@keyframes l1Anm {
+    50% {
+        transform: translateX(12%) translateY(-7%);
+
+    }
+}
+
+
+@keyframes l2Anm {
+    50% {
+        transform: translateX(4%) translateY(-1%);
+    }
+}
+
+@keyframes l3Anm {
+    50% {
+        transform: translateX(-12%) translateY(7%);
+    }
+}
 
 @media (min-width: 768px) {
     .mainContainer {

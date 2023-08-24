@@ -38,7 +38,12 @@
 }
 
 .p > span {
-    color: var(--text-blue)
+    color: var(--text-blue);
+    filter: var(--blue-shadow)
+}
+
+.lContainer {
+    position: relative;
 }
 
 
