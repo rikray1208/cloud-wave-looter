@@ -30,9 +30,6 @@ const Footer = () => {
                     <Link href={'https://discord.gg/BkgQwVnB5'}>
                         <Image src={ds} alt={'ds'} width={48} quality={100}/>
                     </Link>
-                    <Link href={'https://vk.com/rexto.blog'}>
-                        <Image src={vk} alt={'vk'} width={48} quality={100}/>
-                    </Link>
                     <Link href={'https://t.me/RostyslavPotapov'}>
                         <Image src={tg} alt={'tg'} width={48} quality={100}/>
                     </Link>

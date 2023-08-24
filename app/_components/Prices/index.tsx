@@ -10,7 +10,7 @@ import {motion, Variants} from "framer-motion"
 
 const items = [
     {key: 1, title: 'Подписка 1 месяц', value: '5.99$'},
-    {key: 2, title: 'Подписка 6 месяц', value: '19.99$'},
+    {key: 2, title: 'Подписка 6 месяцев', value: '19.99$'},
     {key: 3, title: 'Подписка 1 год', value: '24.99$'},
     {key: 4, title: 'Подписка LT', value: '49.99$'},
 ]
