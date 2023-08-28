@@ -104,6 +104,7 @@
     border-radius: 20px;
 
     position: relative;
+    width: 600px;
 }
 
 .mask {
@@ -168,8 +169,8 @@
     }
 
     .ellipse3 {
-        right: -5vw;
-        bottom: -20vh;
+        right: -2vw;
+        bottom: -15vh;
     }
 }
 

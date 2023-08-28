@@ -42,8 +42,6 @@ const Footer = () => {
             <div className={styles.videoContainer}>
                 <video
                     className={styles.video}
-                    width={540}
-                    height={771}
                     autoPlay
                     muted
                     loop

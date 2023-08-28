@@ -16,9 +16,9 @@ import {useIsMobile} from "@/app/_hooks/useIsMobile";
 const items = [
     {key: 1, value: <>Поддержка <span>прокси</span></>},
     {key: 2, value: <><span>Несколько</span> трейд ссылок</>},
-    {key: 3, value: <><span>Автоматическое</span> принятие входящих трейдов</>},
+    {key: 3, value: <><span>Автоматическое</span> принятие трейдов</>},
     {key: 4, value: <><span>Фильтры</span> для популярных стим игр</>},
-    {key: 5, value: <>Возможность обрабатывать <span>разные</span> инвентари</>},
+    {key: 5, value: <>Обрабатка <span>разных</span> инвентарей</>},
     {key: 6, value: <><span>Отслеживание</span> аккаунтов с КТ</>},
     {key: 7, value: <>Авторизация по <span>токену</span></>},
     {key: 8, value: <>Разные <span>режимы</span> работы</>},
@@ -111,7 +111,7 @@ const Description = () => {
                         }
                     </ul>
                 </Card>
-                <Image className={styles.looter} src={footer} alt={'looter'} quality={100} height={550}/>
+                <Image className={styles.looter} src={footer} alt={'looter'} quality={100}/>
             </motion.div>
         </section>
     );
