@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 68px;
-    margin-top: 160px;
+    margin-top: 60px;
 
     position: relative;
 }
@@ -58,6 +58,10 @@
 }
 
 @media (min-width: 768px) {
+    .container {
+        margin-top: 160px;
+    }
+
     .list {
         display: flex;
         justify-content: center;
