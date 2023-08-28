@@ -21,7 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={openSans.className}>
       {children}
-      <Image className={'absolute inset-0 z-[-1]'} src={back} alt={'background'} quality={100}/>
+      <Image
+          className={'absolute inset-0 bg-cover z-[-1]'}
+          width={2560}
+          src={back}
+          alt={'background'}
+          quality={100}
+      />
       </body>
     </html>
   )
